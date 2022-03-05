@@ -1,0 +1,91 @@
+main img {
+    width: 300px;
+}
+main .container {
+    width: 100%;
+    padding: 30px 20px;
+}
+
+main .container.about {
+    position: relative;
+    
+}
+main .container.about::before {
+    content: '';
+    background-image: url('https://cdn-icons-png.flaticon.com/512/4094/4094782.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.07;
+    z-index: -1;
+}
+
+main .container .body{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+main .container.about .body .img{
+    width: 250px;
+    height: 250px;
+    margin-right: 100px;
+    background-color: #000;
+    background-image: url('../imgs/alejandro.jpg');
+    background-position-y: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+}
+
+main .container .body .img:hover {
+    background-image: url('../imgs/perfil.jpeg');
+    box-shadow: 2px 2px 5px #000;
+}
+
+main .container.hobbies {
+    background-color:#0b9fb3;
+}
+
+main .container.hobbies .body .img {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1178/1178931.png');
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    margin-left: 100px;
+}
+
+main .container.gallery .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main .container.gallery .gallery-container img {
+    filter: brightness(.5);
+    -webkit-filter: brightness(.5);
+    cursor: pointer;
+}
+main .container.gallery .gallery-container img:hover {
+    filter: brightness(1);
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    -webkit-filter: brightness(1);
+    box-shadow: 3px 3px 5px 1px #000 ,
+    -3px -3px 5px 1px rgba(0, 0, 0, 0.26);
+}
